@@ -70,7 +70,7 @@ def fill_tables():
             return
     for table in TABLES:
         script = os.path.join(SQL_SCRIPTS_PATH, f'fill_{table}.sql')
-        with open(script, 'r') as f:
+        with open(script, 'r', encoding='utf-8') as f:
             sql_utils.run_sql_script(f, connection)
 
 
